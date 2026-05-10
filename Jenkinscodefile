@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Disk Usage') {
+            steps {
+                sh 'df -kh'
+            }
+        }
+
+        stage('Change Directory') {
+            steps {
+                sh 'cd /tmp && pwd'
+            }
+        }
+
+        stage('List Files') {
+            steps {
+                sh 'ls -lrth /tmp'
+            }
+        }
+
+    }
+}
