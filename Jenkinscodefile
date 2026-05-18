@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-       stage('CPU Usage') {
+        stage('CPU Usage') {
             steps {
                 sh 'top'
             }
