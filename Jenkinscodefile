@@ -20,6 +20,10 @@ pipeline {
                 sh 'ls -lrth /tmp'
             }
         }
-
+       stage('CPU Usage') {
+            steps {
+                sh 'top'
+            }
+        }
     }
 }
