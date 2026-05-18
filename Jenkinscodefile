@@ -23,7 +23,7 @@ pipeline {
 
         stage('CPU Usage') {
             steps {
-                sh 'top'
+                sh 'top -b -n 1'
             }
         }
     }
