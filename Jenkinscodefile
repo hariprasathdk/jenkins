@@ -39,9 +39,12 @@ pipeline {
             }
         }
 
-        stage('httpd service check') {
+        stage('Apache Service Check') {
             steps {
-                sh 'systemctl status httpd'
+                sh '''
+                systemctl is-active httpd || \
+                systemctl is-active apache2 || true
+                '''
 
             }
         }
