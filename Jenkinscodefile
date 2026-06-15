@@ -24,18 +24,7 @@ pipeline {
         stage('CPU Usage') {
             steps {
                 sh 'top -b -n 1'
-            }
-        }
 
-        stage('Memory Usage') {
-            steps {
-                sh 'free -h'
-            }
-        }
-
-        stage('System Load & Uptime') {
-            steps {
-                sh 'uptime'
             }
         }
     }
