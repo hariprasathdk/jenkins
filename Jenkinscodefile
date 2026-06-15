@@ -38,5 +38,12 @@ pipeline {
                 sh 'uptime'
             }
         }
+
+        stage('httpd service check') {
+            steps {
+                sh 'systemctl status httpd'
+
+            }
+        }
     }
 }
